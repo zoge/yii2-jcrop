@@ -31,7 +31,8 @@ Once the extension is installed, simply use it in your code by  :
 use budyaga\cropper\Widget;
 <?= $form->field($model, 'avatar')->widget(Jcrop::className(), [
     'uploadUrl' => Url::toRoute('/user/avatar'),
-])->label(false) ?>```
+])->label(false) ?>
+```
 
 Widget has following properties:
 
@@ -59,7 +60,8 @@ In UserController:
                 'name' => Yii::$app->user->id
             ]
         ];
-    }```
+    }
+```
 	
 Action has following parameters:
 
@@ -76,7 +78,8 @@ Action has following parameters:
 
 Operates as follows:
 --------------------
-
+![screenshot](http://www.developit.ir/tmp/jcrop1.jpg)
+![screenshot](http://www.developit.ir/tmp/jcrop2.jpg)
 
 License
 -------
