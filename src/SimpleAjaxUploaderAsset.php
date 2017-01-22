@@ -1,5 +1,5 @@
 <?php
-namespace developit\jcrop\assets;
+namespace developit\jcrop;
 use yii\web\AssetBundle;
 class SimpleAjaxUploaderAsset extends AssetBundle
 {
