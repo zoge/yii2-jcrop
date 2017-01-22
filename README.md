@@ -47,7 +47,7 @@ Widget has following properties:
 | cropAreaHeight  | Height box for preview | 300    |No |
 | extensions  | Allowed file extensions (string). | jpeg, jpg, png, gif    |No |
 
-In UserController:
+In controller:
 
 ```php
     public function actions()
