@@ -8,6 +8,8 @@
 .cropper-label {
     cursor: pointer;
     padding: 10px;
+    height: 100%;
+    cursor: pointer;
 }
 .cropper-label div{
     margin-bottom: 10px;

@@ -19,7 +19,7 @@ use yii\helpers\Html;
         <?= Html::button(Yii::t('jcrop', 'Select Another Photo'),['class' => 'btn btn-sm btn-info upload-new-photo hidden']) ?>
     </div>
 
-    <div class="progress hidden" style="width: <?= $widget->cropAreaWidth; ?>;">
+    <div class="progress hidden" style="width: <?= $widget->cropAreaWidth; ?>; margin-top: 15px; margin-bottom: 15px;">
         <div class="progress-bar progress-bar-striped progress-bar-success active" role="progressbar" style="width: 0%">
             <span class="sr-only"></span>
         </div>

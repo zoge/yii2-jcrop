@@ -1,13 +1,13 @@
 <?php
 namespace developit\jcrop;
 use developit\jcrop\Asset;
-use yii;
+use Yii;
 use yii\base\InvalidConfigException;
 use yii\helpers\Json;
 use yii\widgets\InputWidget;
 class Jcrop extends InputWidget
 {
-    public $uploadParameter = 'file';
+    public $uploadParameter = 'developitJcropFileUpload';
     public $width = 200;
     public $height = 200;
     public $uploadUrl;
