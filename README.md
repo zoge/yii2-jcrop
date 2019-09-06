@@ -10,15 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer global require "fxp/composer-asset-plugin:^1.2.0"
-
-php composer.phar require --prefer-dist developit/yii2-jcrop "1.0.0"
+php composer.phar require --prefer-dist developit/yii2-jcrop "*"
 ```
 
 or add
 
 ```
-"developit/yii2-jcrop": "1.0.0"
+"developit/yii2-jcrop": "*"
 ```
 
 to the require section of your `composer.json` file.
