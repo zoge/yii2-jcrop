@@ -1,6 +1,6 @@
 <?php
 namespace developit\jcrop\actions;
-use Yii;
+use yii;
 use yii\base\Action;
 use yii\base\DynamicModel;
 use yii\base\InvalidConfigException;
@@ -14,7 +14,7 @@ class Upload extends Action
 {
     public $path;
     public $url;
-    public $uploadParam = 'developitJcropFileUpload';
+    public $uploadParam = 'file';
     public $name;
     public $maxSize = 2097152;
     public $extensions = 'jpeg, jpg, png, gif';
@@ -43,11 +43,8 @@ class Upload extends Action
     public function run()
     {
         if (Yii::$app->request->isPost) {
-
-            ${$this->uploadParam} = UploadedFile::getInstanceByName($this->uploadParam);
-
+            $file = UploadedFile::getInstanceByName($this->uploadParam);
             $model = new DynamicModel(compact($this->uploadParam));
-
             $model->addRule($this->uploadParam, 'image', [
                 'maxSize' => $this->maxSize,
                 'tooBig' => Yii::t('jcrop', 'File Size Error', ['size' => $this->maxSize / (1024 * 1024)]),
@@ -68,7 +65,7 @@ class Upload extends Action
                 $width = $request->post('width', $this->width);
                 $height = $request->post('height', $this->height);
                 $image = Image::crop(
-                    ${$this->uploadParam}->tempName . $request->post('filename'),
+                    $file->tempName . $request->post('filename'),
                     intval($request->post('w')),
                     intval($request->post('h')),
                     [$request->post('x'), $request->post('y')]

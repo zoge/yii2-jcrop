@@ -1,4 +1,3 @@
-
 (function ($) {
     var jcrop_api;
     $.fn.cropper = function (options, width, height) {
@@ -41,6 +40,7 @@
                         },function () {
                             jcrop_api = this;
                         });
+                        console.log(jcrop_api)
                         cropper.setProgress(0);
                     };
 
@@ -97,6 +97,7 @@
                     }, options);
 
                     cropper.uploader = new ss.SimpleUpload(settings);
+
                     cropper.$widget
                         .on('click', '.delete-photo', function () {
                             cropper.deletePhoto();
@@ -107,6 +108,7 @@
                             data[yii.getCsrfParam()] = yii.getCsrfToken();
                             data['width'] = cropper.$width_input.val();
                             data['height'] = cropper.$height_input.val();
+                            console.log(data);
                             if (cropper.uploader._queue.length) {
                                 cropper.selectedFile = cropper.uploader._queue[0];
                             } else {
@@ -153,7 +155,5 @@
             };
 
         cropper.init();
-        $( "input[name='"+options.name+"']" ).parent().css({'display': 'none'});
-        $( "input[name='"+options.name+"']" ).parent().hide()
     };
 })(jQuery);
