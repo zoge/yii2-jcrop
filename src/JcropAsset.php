@@ -3,7 +3,7 @@ namespace developit\jcrop;
 use yii\web\AssetBundle;
 class JcropAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/bower/jcrop/';
+    public $sourcePath = '@vendor/bower-asset/jcrop/';
     public $js = [
         'js/jquery.Jcrop.min.js'
     ];
