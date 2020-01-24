@@ -40,7 +40,6 @@
                         },function () {
                             jcrop_api = this;
                         });
-                        console.log(jcrop_api)
                         cropper.setProgress(0);
                     };
 
@@ -108,7 +107,6 @@
                             data[yii.getCsrfParam()] = yii.getCsrfToken();
                             data['width'] = cropper.$width_input.val();
                             data['height'] = cropper.$height_input.val();
-                            console.log(data);
                             if (cropper.uploader._queue.length) {
                                 cropper.selectedFile = cropper.uploader._queue[0];
                             } else {
