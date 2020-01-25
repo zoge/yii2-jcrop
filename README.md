@@ -28,7 +28,7 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-use developit\jcrop\Jcrop;
+use zoge\jcrop\Jcrop;
 <?= $form->field($model, 'avatar')->widget(Jcrop::className(), [
     'uploadUrl' => Url::toRoute('/user/avatar'),
 ])->label(false) ?>
