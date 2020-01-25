@@ -1,6 +1,6 @@
 <?php
 namespace zoge\jcrop;
-use developit\jcrop\Asset;
+use zoge\jcrop\Asset;
 use yii;
 use yii\base\InvalidConfigException;
 use yii\helpers\Json;
@@ -75,7 +75,7 @@ class Jcrop extends InputWidget
         if (!isset(Yii::$app->i18n->translations['jcrop']) && !isset(Yii::$app->i18n->translations['jcrop/*'])) {
             Yii::$app->i18n->translations['jcrop'] = [
                 'class' => 'yii\i18n\PhpMessageSource',
-                'basePath' => '@developit/jcrop/messages',
+                'basePath' => '@zoge/jcrop/messages',
                 'forceTranslation' => true,
                 'fileMap' => [
                     'jcrop' => 'jcrop.php'

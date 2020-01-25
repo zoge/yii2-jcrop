@@ -9,7 +9,7 @@ use yii\web\Response;
 use yii\web\UploadedFile;
 use yii\imagine\Image;
 use Imagine\Image\Box;
-use developit\jcrop\Jcrop;
+use zoge\jcrop\Jcrop;
 class Upload extends Action
 {
     public $path;
