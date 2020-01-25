@@ -11,6 +11,7 @@ class Jcrop extends InputWidget
     public $width = 200;
     public $height = 200;
     public $uploadUrl;
+	public $imagePath = "";
     public $maxSize = 2097152; // 2MB
     public $thumbnailWidth = 300;
     public $thumbnailHeight = 300;
@@ -53,6 +54,7 @@ class Jcrop extends InputWidget
             'url' => $this->uploadUrl,
             'name' => $this->uploadParameter,
             'maxSize' => $this->maxSize / 1024,
+			'imagePath' => $this->imagePath,
             'allowedExtensions' => explode(', ', $this->extensions),
             'size_error_text' => Yii::t('jcrop', 'File Size Error', ['size' => $this->maxSize / (1024 * 1024)]),
             'ext_error_text' => Yii::t('jcrop', 'File Extension Error', ['formats' => $this->extensions]),

@@ -74,7 +74,7 @@ class Upload extends Action
                 );
                 if ($image->save($this->path . $model->{$this->uploadParam}->name)) {
                     $result = [
-                        'filelink' => $this->url . $model->{$this->uploadParam}->name . '?' . microtime()
+                        'filelink' => $this->url . $model->{$this->uploadParam}->name
                     ];
                 } else {
                     $result = [

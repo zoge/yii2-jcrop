@@ -13,6 +13,7 @@
                 $new_photo_area: $widget.find('.new-photo-area'),
                 $cropper_label: $widget.find('.cropper-label'),
                 $cropper_buttons: $widget.find('.cropper-buttons'),
+                $crop_photo: $widget.find('.crop-photo'),
                 $width_input: $widget.find('.width-input'),
                 $height_input: $widget.find('.height-input'),
                 uploader: null,
@@ -57,6 +58,7 @@
                                 cropper.selectedFile = null;
                                 cropper.uploader._queue = [];
                             }
+                            cropper.$new_photo_area.removeClass('hidden');
                             return true;
                         },
                         onSubmit: function () {
@@ -77,8 +79,10 @@
                                 return;
                             }
                             cropper.showError('');
-
-                            cropper.$thumbnail.attr({'src': response['filelink']});
+                            cropper.$crop_photo.addClass('hidden');
+                            cropper.$new_photo_area.addClass('hidden');
+                            cropper.$thumbnail.attr({'src': options['imagePath'] + response['filelink']});
+                            cropper.$photo_field.val(response['filelink']);
                             cropper.$photo_field.val(response['filelink']);
                             if ((typeof options.onCompleteJcrop !== "undefined") && (typeof options.onCompleteJcrop === "string")) {
                                 eval('var onCompleteJcrop = ' + options.onCompleteJcrop);

@@ -6,7 +6,7 @@ use yii\helpers\Html;
     <?= Html::activeHiddenInput($model, $widget->attribute, ['class' => 'photo-field']); ?>
     <?= Html::hiddenInput('width', $widget->width, ['class' => 'width-input']); ?>
     <?= Html::hiddenInput('height', $widget->height, ['class' => 'height-input']); ?>
-    <div class="new-photo-area" style="height: <?= $widget->cropAreaHeight; ?>; width: <?= $widget->cropAreaWidth; ?>;">
+    <div class="new-photo-area hidden" style="height: <?= $widget->cropAreaHeight; ?>; width: <?= $widget->cropAreaWidth; ?>;">
         <div class="cropper-label">
             <div><?= Yii::t('jcrop', 'Drag Photo');?></div>
             <div><?= Yii::t('jcrop', 'Or');?></div>
@@ -16,7 +16,7 @@ use yii\helpers\Html;
 
     <div class="cropper-buttons">
         <?= Html::button(Yii::t('jcrop', 'Crop Photo'),['class' => 'btn btn-sm btn-success crop-photo hidden']) ?>
-        <?= Html::button(Yii::t('jcrop', 'Select Another Photo'),['class' => 'btn btn-sm btn-info upload-new-photo hidden']) ?>
+        <?= Html::button(Yii::t('jcrop', 'Select Another Photo'),['class' => 'btn btn-sm btn-info upload-new-photo']) ?>
     </div>
 
     <div class="progress hidden" style="width: <?= $widget->cropAreaWidth; ?>;">
@@ -27,11 +27,11 @@ use yii\helpers\Html;
 
     <?= Html::img(
         $model->{$widget->attribute} != ''
-            ? $model->{$widget->attribute}
+            ? $widget->imagePath.$model->{$widget->attribute}
             : null,
         [
             'style' => 'height: ' . $widget->height . 'px; width: ' . $widget->width . 'px',
-            'class' => 'thumbnail jcrop-thumbnail hide'
+            'class' => 'thumbnail jcrop-thumbnail'
         ]
     ); ?>
 
