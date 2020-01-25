@@ -1,5 +1,5 @@
 <?php
-namespace developit\jcrop;
+namespace zoge\jcrop;
 use yii\web\AssetBundle;
 class JcropAsset extends AssetBundle
 {

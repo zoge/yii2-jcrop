@@ -1,5 +1,5 @@
 <?php
-namespace developit\jcrop;
+namespace zoge\jcrop;
 use developit\jcrop\Asset;
 use yii;
 use yii\base\InvalidConfigException;

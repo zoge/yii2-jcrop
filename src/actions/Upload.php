@@ -1,5 +1,5 @@
 <?php
-namespace developit\jcrop\actions;
+namespace zoge\jcrop\actions;
 use yii;
 use yii\base\Action;
 use yii\base\DynamicModel;
