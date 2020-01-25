@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist developit/yii2-jcrop "*"
+php composer.phar require --prefer-dist zoge/yii2-jcrop "*"
 ```
 
 or add
 
 ```
-"developit/yii2-jcrop": "*"
+"zoge/yii2-jcrop": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -28,7 +28,7 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-use developit\jcrop\Jcrop;
+use zoge\jcrop\Jcrop;
 <?= $form->field($model, 'avatar')->widget(Jcrop::className(), [
     'uploadUrl' => Url::toRoute('/user/avatar'),
 ])->label(false) ?>
@@ -54,7 +54,7 @@ In UserController:
     {
         return [
             'avatar' => [
-                'class' => 'developit\jcrop\actions\Upload',
+                'class' => 'zoge\jcrop\actions\Upload',
                 'url' => '/common/files/',
                 'path' => Yii::getAlias('@files'),
                 'name' => Yii::$app->user->id
