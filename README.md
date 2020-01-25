@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist developit/yii2-jcrop "*"
+php composer.phar require --prefer-dist zoge/yii2-jcrop "*"
 ```
 
 or add
 
 ```
-"developit/yii2-jcrop": "*"
+"zoge/yii2-jcrop": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -54,7 +54,7 @@ In UserController:
     {
         return [
             'avatar' => [
-                'class' => 'developit\jcrop\actions\Upload',
+                'class' => 'zoge\jcrop\actions\Upload',
                 'url' => '/common/files/',
                 'path' => Yii::getAlias('@files'),
                 'name' => Yii::$app->user->id
@@ -84,4 +84,5 @@ Operates as follows:
 License
 -------
 yii2-jcrop is an open source project modified by Ehsan Rezaei(http://www.developit.ir) that is licensed under GPL-3.0.
+Modified by ZoGe.
 used and modified from https://github.com/budyaga/yii2-cropper
