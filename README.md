@@ -78,8 +78,7 @@ Action has following parameters:
 
 Operates as follows:
 --------------------
-![screenshot](http://www.developit.ir/tmp/jcrop1.jpg)
-![screenshot](http://www.developit.ir/tmp/jcrop2.jpg)
+![screenshot](https://e-dog.hu/img/yii2-jcorp.gif)
 
 License
 -------
